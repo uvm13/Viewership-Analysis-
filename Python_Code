@@ -1,0 +1,85 @@
+
+#Meta Data
+This dataset offers insights into viewing habits across multiple platforms, detailing which shows customers watch. 
+
+
+# Install Dependencies
+A dependency is installed so that we can load data from an excel file
+%pip install openpyxl
+
+# Import Library
+# Import pandas for data manipulation
+import pandas as pd
+
+# Import matplotlib for data visualization
+import matplotlib.pyplot as pit
+
+import numpy as np
+# import numpy for numerical operation
+
+# Data Load
+Data load is to view the location of the data
+
+#Read excel file 
+data_path= "/Workspace/Users/uv.matadin@gmail.com/Viewership Analysis _Python Coding.xlsx"
+
+#load the data
+df =pd.read_excel('/Workspace/Users/uv.matadin@gmail.com/Viewership Analysis _Python Coding.xlsx')
+
+
+#display the data
+display (df) 
+
+#Displays a concise summary of the DataFrame, including the number of non-null entries and data types for each
+df.info()
+
+# Gives the number of rows and columns 
+df.shape
+
+# Displays the data types for the columns 
+df.dtypes
+
+# Displays the column labels of the DataFrame
+df.columns 
+
+df.duplicated
+#returns a boolean series indicating duplicate rows
+
+#Returns the number of duplicate rows in the DataFrame
+df.duplicated().sum()
+
+#Removes the duplicate rows from the DataFrame. Inplace = True means the changes are made in-place and this is the data that will be used going forward.
+df.drop_duplicates(inplace=True)
+
+#Returns the number of duplicate rows after removal
+df.duplicated().sum()
+
+#Display the DataFrame
+display(df)
+
+#Returns the number of rows and columns in the DataFrame
+df.shape
+
+#Returns the first 5 rows of the DataFrame
+df.head(5)
+
+# Returns the last 5 rows of the DataFram
+df.tail(5)
+
+# Returns the number of null values in each column of the DataFrame
+df.isnull().sum()
+
+# Allows us to rename columns and use a new name going forward
+df.rename(columns= {'DateID':'Date'}, inplace = True)
+
+#Allows us to display the data in the dataframe
+display(df)
+
+# Check unique values in the 'Platform' column using pandas
+unique_platforms = df['Platform'].unique()
+
+#Displays the min value in the 'TotalTimeWatched' column
+df['TotalTimeWatched'].min()
+
+#Displays the max value in the 'TotalTimeWatched' column
+df['TotalTimeWatched'].max()
