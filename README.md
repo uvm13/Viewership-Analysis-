@@ -15,3 +15,8 @@
 - Platform: The device or platform used to watch the content, such as iOS, Web, Android, or Leanback.
 - PlayEventType: The type of viewing event, like LiveTV, Catch Up, Downloads, or Other.
 - VideoTitle: The name of the video content that was watched.
+
+
+# Visualisation
+
+<img width="763" height="470" alt="image" src="https://github.com/user-attachments/assets/4ad1206b-6a17-4510-93d9-45c42be369d0" />
